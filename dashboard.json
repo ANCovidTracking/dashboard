@@ -1,0 +1,24 @@
+[
+    {
+        "cConf": "7,848",
+        "ncConf": "+24",
+        "cAct": "105",
+        "ncAct": "+14",
+        "cRecov": "7,614",
+        "ncRecov": "+10",
+        "cDeath": "129",
+        "ncDeath": "+0",
+        "cTest": "6,71,248",
+        "ncTest": "+854",
+        "cTPR": "1.17%",
+        "ncTPR": "+0.0%",
+        "cPvac": "3,10,678",
+        "ncPvac": "+2,541",
+        "cFvac": "2,95,155",
+        "ncFvac": "+378",
+        "lastUpdated": "06 Jan 2022 @22:00"
+
+       
+
+    }
+]

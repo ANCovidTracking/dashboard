@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8">
+        <meta name="description" content="ANCovidTracking">
+        <meta name="keywords" content="ANCovidTracking, CovidTracking, Andaman, Covid 19, Covid, Covid19india">
+        <meta name="author" content="ANCovidTracking">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+        <!-- <link rel="stylesheet" href="dists/css/bootstrap.min.css" /> -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="dists/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="dists/tab.css" />
+
+        <link rel="icon" type="image/png" href="dists/icon.png" />
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="dists/jquery.3.6.0.min.js"></script> 
+
+	<title>ANCovidTracking * New Deaths</title>
+
+</head>
+
+<style>
+	a{
+	text-decoration:none;
+	color:#DF1436;
+  
+  }
+  </style>
+
+<body>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary svg">
+		<div class="container">
+		  <a class="navbar-brand" href="index.html">#ANCovidTracking Dashboard</a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+			  <li class="nav-item">
+				<a class="nav-link" aria-current="page" href="index.html">Home</a>
+			  </li>
+			</ul>
+		  </div>
+	  
+		  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+			<ul class="navbar-nav"> <span class="navbar-text"> ver 5.0 </span>
+			</ul>
+		  </div>
+	  
+		</div>
+	  </nav>
+<div class="container">
+	<div class="row">
+		<div class="col">
+	<h5><b>New Death Statistics for A&N Islands, India:</b></h5>
+  <h6 class="text badge bg-warning text-dark"> <div id="lastUpdated"></div></h6>
+  <i class="fab fa-twitter-square fa-lg" style="color:#0D7CE1"></i> 
+      <span style = "color:#DF1436;"> <b> <a href="https://twitter.com/ANCovidTracking"  target='_blank'>@ANCovidTracking </a> </b></span>
+      </span> 
+    </div>
+</div>
+
+<div class="row">
+ 
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        	<div class="row">
+      	<div class="col"><h5 class="card-title">Daily New Deaths</h5>
+      	</div>
+      	<div class="col">
+      		<div class="row">
+      			<div class="col">
+
+      			<h6 class="card-subtitle mb-2 mf" id="d_dth"></h6>
+      		</div>
+
+      		</div>
+      		<div class="row">	<div class="col"><h6 class="card-subtitle mb-2 sf" id="nd_dth"></h6>
+      			
+      		</div>
+
+      		
+      	</div>
+    
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+ <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        	<div class="row">
+      	<div class="col"><h5 class="card-title">7-day Moving Avg.</h5>
+      	</div>
+      	<div class="col">
+      		<div class="row">
+      			<div class="col">
+
+      			<h6 class="card-subtitle mb-2 mf" id="sday"></h6>
+      		</div>
+
+      		</div>
+      		<div class="row">	<div class="col"><h6 class="card-subtitle mb-2 sf" id="nsday"></h6>
+      			
+      		</div>
+      	</div>
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+   <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        	<div class="row">
+      	<div class="col"><h5 class="card-title">Total Deaths</h5>
+			<h6 class="card-subtitle mb-2 text-muted">Cumulative</h6>
+      	</div>
+      	<div class="col">
+      		<div class="row">
+      			<div class="col">
+
+      			<h3 class="fw-bold mb-2" id="totalDeath"></h3>
+      		</div>
+
+      		</div>
+      </div>
+      </div>
+      <div class="row">	<div class="col"><small class="text badge bg-primary" id=""></small>
+      			
+      		</div>
+      	</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <hr/>
+
+</div>
+
+
+<div class="container">
+
+<div class="tabset">
+  <!-- Tab 1 -->
+  <input type="radio" name="tabset" id="tab1" aria-controls="daily60" checked>
+  <label for="tab1">Daily (Last 60 days)</label>
+
+   <!-- Tab 2 -->
+   <input type="radio" name="tabset" id="tab2" aria-controls="daily">
+   <label for="tab2">Daily (Since Mar 2020)</label>
+
+
+   <!-- Tab 3 -->
+  <input type="radio" name="tabset" id="tab3" aria-controls="cum">
+  <label for="tab3">Cumulative (Since Mar 2020)</label>
+
+  
+  <div class="tab-panels">
+    
+   <section id="daily60" class="tab-panel">
+     <div class="flourish-embed flourish-chart" data-src="visualisation/6413201"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+    </section>
+
+	<section id="daily" class="tab-panel">
+		<div class="flourish-embed flourish-chart" data-src="visualisation/6413240"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+		
+	   </section>
+ 
+    <section id="cum" class="tab-panel">
+    	<div class="flourish-embed flourish-chart" data-src="visualisation/6413282"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+      
+    </section>
+    
+  </div>
+  
+</div>
+<p><span class="text"> <small>
+			Data Source: <b>
+				<i class="fab fa-twitter" style="color:#3C7FE1"></i> @Andaman_Admin 
+				<i class="fa fa-globe" style="color:#3C7FE1"></i> www.dhs.andaman.gov.in </b>
+				<b> </b> </small> </span></p>
+</div>
+
+
+</div>
+
+<div class="container">
+	<footer class="footer mt-auto py-3">
+	  <div class="container-fluid">
+		<hr>
+  
+		  <small> <span class="text"> <b> #STAYHOME &#8226; #STAYSAFE &#8226; #WEARMASK &#8226; #CLEANHANDS &#8226; #GETVACCINATED &#8226; #STOPTHESPREAD </b> </span>
+		  </small>
+		  <br>
+
+		   <span class="text"> <i class="fa-regular fa-copyright"></i> <b> ANCovidTracking 2022 </b> </span>
+		  
+  
+		</div> 
+	  </footer>
+  
+  </div>
+
+  <script>
+
+	fetch("ndeath.json")
+	.then(function (response){
+		return response.json();
+	})
+
+	.then(function (data) {
+		for (var i=0; i<data.length; i++){
+			document.getElementById("d_dth").innerHTML = data[i].d_dth;
+
+			var nc1=document.getElementById("nd_dth");  
+			nc1.innerHTML = data[i].nd_dth;
+
+			if ( nc1.innerHTML>0){
+				nc1.innerHTML = '<i class="fas fa-arrow-up" style="color:#DF1436"></i> ' + data[i].nd_dth;
+			}
+
+			 
+			else if(nc1.innerHTML<0){
+			nc1.innerHTML =  '<i class="fas fa-arrow-down" style="color:#40B107"></i> '  +  data[i].nd_dth;
+			}
+
+			else 
+			  nc1.innerHTML =  '<i class="fas fa-arrows-alt-h" style="color:#40B107"></i> ' + data[i].nd_dth;
+
+			
+
+			document.getElementById("sday").innerHTML = data[i].sday;
+			  
+			  
+			var nc2=document.getElementById("nsday");  
+			nc2.innerHTML = data[i].nsday;
+
+			if ( nc2.innerHTML>0){
+				nc2.innerHTML = '<i class="fas fa-arrow-up" style="color:#DF1436"></i> ' + data[i].nsday;
+			}
+
+			 
+			else if(nc2.innerHTML<0){
+			nc2.innerHTML =  '<i class="fas fa-arrow-down" style="color:#40B107"></i> '  +  data[i].nsday;
+			}
+
+			else 
+			  nc2.innerHTML =  '<i class="fas fa-arrows-alt-h" style="color:#40B107"></i> ' + data[i].nsday;
+
+			
+			document.getElementById("totalDeath").innerHTML = data[i].totalDeath;
+
+			var nc3=document.getElementById("lastUpdated");    
+			nc3.innerHTML =  'Last updated on ' + data[i].lastUpdated ;
+			
+		}
+	})
+
+	.catch(function (err){
+		console.log(err);
+	});
+	
+
+	
+</script>
+
+</body>
+
+</html>

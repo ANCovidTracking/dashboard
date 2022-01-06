@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+      	<meta name="description" content="ANCovidTracking">
+        <meta name="keywords" content="ANCovidTracking, CovidTracking, Andaman, Covid 19, Covid, Covid19india">
+        <meta name="author" content="ANCovidTracking">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+        <!-- <link rel="stylesheet" href="dists/css/bootstrap.min.css" /> -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="dists/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="dists/tab.css" />
+
+        <link rel="icon" type="image/png" href="dists/icon.png" />
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="dists/jquery.3.6.0.min.js"></script> 
+
+	 
+    <title>ANCovidTracking * Home</title>
+
+    <style>
+
+      hr.divider { 
+       margin: 0em;
+       border-width: 2px;
+      } 
+
+      a{
+        text-decoration: none;
+        color: #850a43;
+      }
+
+    
+    </style>
+  </head>
+
+  <body>
+
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary svg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">#ANCovidTracking Dashboard</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav"> <span class="navbar-text"> ver 5.0 </span>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+  
+  <div class="container py-2">
+    <div class="col-lg-12 col-md-6">
+      
+    <div class="card">
+      <div class="card-body">
+        <h4 class="fw-bold">
+          Welcome to <span style="color: #c0392b"><i class="fas fa-virus"></i></span>
+          <span style="color: #273c75">ANCovidTracking</span>
+        </h4>
+        <h5>A Volunteer-driven initiative to track #Covid19 Cases, Testing & Vaccination Data for Andaman and Nicobar Islands, India.
+        </h5>
+        <hr>
+        
+        <h6> <b> <span style="color:#581845"> Follow on Twitter <i class="fab fa-twitter-square fa-lg" 
+          style="color:#0D7CE1"></i> <span style = "color:#DF1436;"> <a href="https://twitter.com/ANCovidTracking"  target='_blank'>@ANCovidTracking </a></span> </span> </b></h6>
+        
+        <h6><b> GitHub  <i class="fab fa-github"></i><a href="https://github.com/ANCovidtracking" target='_blank'> ANCovidTracking</a></b></h6>
+        
+      </div>
+      
+     
+    </div>
+
+  </div>
+
+  
+
+  <div class="row py-2">
+           
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Total Cases</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Cumulative</h6>
+          <div class="row">
+            <div class="col">
+              <h2 class="card-text" id="cConf"></h2>
+            </div>
+            <div class="col">
+              <h4 class="card-text" id="ncConf"></h4>
+            </div>
+          </div>
+          <a href="ncase.html" class="card-link">View in Detail <i class="fas fa-arrow-right"></i></a>
+         
+        </div>
+      </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Total Active</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Cumulative</h6>
+            <div class="row">
+              <div class="col">
+                <h2 class="card-text" id="cAct"></h2>
+              </div>
+              <div class="col">
+                <h4 class="card-text" id="ncAct"></h4>
+              </div>
+            </div>
+           
+            <a href="nactive.html" class="card-link">View in Detail <i class="fas fa-arrow-right"></i></a>
+           
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Total Recovery</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Cumulative</h6>
+            <div class="row">
+              <div class="col">
+                <h2 class="card-text" id="cRecov"></h2>
+              </div>
+              <div class="col">
+                <h4 class="card-text" id="ncRecov"></h4>
+              </div>
+            </div>
+            <a href="nrecovery.html" class="card-link">View in Detail <i class="fas fa-arrow-right"></i></a>
+           
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Total Death</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Cumulative</h6>
+            <div class="row">
+              <div class="col">
+                <h2 class="card-text" id="cDeath"></h2>
+              </div>
+              <div class="col">
+                <h4 class="card-text" id="ncDeath"></h4>
+              </div>
+            </div>
+            <a href="ndeath.html" class="card-link">View in Detail <i class="fas fa-arrow-right"></i></a>
+           
+          </div>
+        </div>
+      </div>
+
+      </div>
+
+      <div class="row py-2">
+           
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Total Test</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Cumulative</h6>
+              <div class="row">
+                <div class="col">
+                  <h2 class="card-text" id="cTest"></h2>
+                </div>
+                <div class="col">
+                  <h4 class="card-text" id="ncTest"></h4>
+                </div>
+              </div>
+              <a href="test_stats.html" class="card-link">View in Detail <i class="fas fa-arrow-right"></i></a>
+             
+            </div>
+          </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Test Positivity</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Cumulative</h6>
+                <div class="row">
+                  <div class="col">
+                    <h2 class="card-text" id="cTPR"></h2>
+                  </div>
+                  <div class="col">
+                    <h4 class="card-text" id="ncTPR"></h4>
+                  </div>
+                </div>
+                <a href="tpr_stats.html" class="card-link">View in Detail <i class="fas fa-arrow-right"></i></a>
+               
+              </div>
+            </div>
+            </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Partial Vaccinated</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Cumulative</h6>
+                <div class="row">
+                  <div class="col">
+                    <h2 class="card-text" id="cPvac"></h2>
+                  </div>
+                  <div class="col">
+                    <h4 class="card-text" id="ncPvac"></h4>
+                  </div>
+                </div>
+                <a href="vaccination.html" class="card-link">View in Detail <i class="fas fa-arrow-right"></i></a>
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Fully Vaccinated</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Cumulative</h6>
+                <div class="row">
+                  <div class="col">
+                    <h2 class="card-text" id="cFvac"></h2>
+                  </div>
+                  <div class="col">
+                    <h4 class="card-text" id="ncFvac"></h4>
+                  </div>
+                </div>
+                <a href="vaccination.html" class="card-link">View in Detail <i class="fas fa-arrow-right"></i></a>
+               
+              </div>
+            </div>
+          </div>
+          
+      </div>
+
+      <div class="row py-2">
+        <div class="col-sm-6">
+        <span class="text bg-warning text-dark fw-bold"> <i class="fas fa-history"></i> <span id="lastUpdated"></span></span>
+        </div>
+      </div>
+
+    </div>
+  
+    </div>
+    
+    <div class="container">
+      <footer class="footer mt-auto py-3">
+        <div class="container-fluid">
+          
+           
+            Data Source: <b>
+            <i class="fab fa-twitter " style="color:#3C7FE1"></i> @Andaman_Admin 
+            <i class="fa fa-globe" style="color:#3C7FE1"></i> www.dhs.andaman.gov.in </b>
+             </small> </span>
+
+             <hr>
+
+             <span class="text"> <b> #STAYHOME &#8226; #STAYSAFE &#8226; #WEARMASK &#8226; #CLEANHANDS &#8226; #GETVACCINATED &#8226; #STOPTHESPREAD </b> </span>
+
+             <hr>
+             <span class="text"> <i class="far fa-copyright"></i> <b> ANCovidTracking 2022 </b> </span>
+
+          </div> 
+        </footer>
+    
+    </div>
+
+    <script>
+
+      fetch("dashboard.json")
+      .then(function (response){
+          return response.json();
+      })
+
+      .then(function (data) {
+          for (var i=0; i<data.length; i++){
+              document.getElementById("cConf").innerHTML = data[i].cConf;
+              document.getElementById("ncConf").innerHTML = data[i].ncConf;
+              document.getElementById("cAct").innerHTML = data[i].cAct;
+              document.getElementById("ncAct").innerHTML = data[i].ncAct;
+              document.getElementById("cRecov").innerHTML = data[i].cRecov;
+              document.getElementById("ncRecov").innerHTML = data[i].ncRecov;
+              document.getElementById("cDeath").innerHTML = data[i].cDeath;
+              document.getElementById("ncDeath").innerHTML = data[i].ncDeath;
+              document.getElementById("cTest").innerHTML = data[i].cTest;
+              document.getElementById("ncTest").innerHTML = data[i].ncTest;
+              document.getElementById("cTPR").innerHTML = data[i].cTPR;
+              document.getElementById("ncTPR").innerHTML = data[i].ncTPR;
+              document.getElementById("cPvac").innerHTML = data[i].cPvac;
+              document.getElementById("ncPvac").innerHTML = data[i].ncPvac;
+              document.getElementById("cFvac").innerHTML = data[i].cFvac;
+              document.getElementById("ncFvac").innerHTML = data[i].ncFvac;
+                
+              var lupdt=document.getElementById("lastUpdated");    
+              lupdt.innerHTML =  'Last updated on ' + data[i].lastUpdated ;
+              
+          }
+      })
+
+      .catch(function (err){
+          console.log(err);
+      });
+      
+      
+  </script>
+
+  </body>
+</html>
