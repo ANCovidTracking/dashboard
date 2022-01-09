@@ -1,22 +1,22 @@
 [
     {
-        "cConf": "7,889",
-        "ncConf": "+41",
-        "cAct": "132",
-        "ncAct": "+27",
-        "cRecov": "7,628",
-        "ncRecov": "+14",
+        "cConf": "7,975",
+        "ncConf": "+86",
+        "cAct": "187",
+        "ncAct": "+55",
+        "cRecov": "7,659",
+        "ncRecov": "+31",
         "cDeath": "129",
         "ncDeath": "+0",
-        "cTest": "6,72,288",
-        "ncTest": "+1040",
-        "cTPR": "1.17%",
-        "ncTPR": "+0.0%",
-        "cPvac": "3,13,668",
-        "ncPvac": "+2,990",
-        "cFvac": "2,95,453",
-        "ncFvac": "+298",
-        "lastUpdated": "07 Jan 2022 @22:00"
+        "cTest": "673329",
+        "ncTest": "+1041",
+        "cTPR": "1.18%",
+        "ncTPR": "+0.01%",
+        "cPvac": "3,15,381",
+        "ncPvac": "+1,713",
+        "cFvac": "2,96,016",
+        "ncFvac": "+563",
+        "lastUpdated": "08 Jan 2022 @22:00"
 
        
 
