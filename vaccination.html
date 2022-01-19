@@ -173,13 +173,37 @@
 
 <div class="row">
  
- 
+    <div class="col-sm-3">
+        <div class="card alert-info">
+          <div class="card-body">
+                <div class="row">
+              <div class="col"><h5 class="card-title">Precautionary Doses </h5>
+                <h6 class="card-subtitle mb-2 text-muted">Cumulative</h6>
+              </div>
+              <div class="col">
+                  <div class="row">
+                      <div class="col">
+    
+                      <h6 class="card-subtitle mb-2 mf" id="pDose"></h6>
+                  </div>
+    
+                  </div>
+                  <div class="row">	<div class="col"><h6 class="card-subtitle mb-2 sf" id="npDose"></h6>
+                      
+                  </div>
+              </div>
+          </div>
+          </div>
+          </div>
+        </div>
+    </div>
+
    <div class="col-sm-6">
     <div class="card alert-info">
       <div class="card-body">
         	<div class="row">
       	<div class="col"><h5 class="card-title">Total Doses Administered </h5>
-			<h6 class="card-subtitle mb-2 text-muted"> (Partial + Fully) Cumulative</h6>
+			<h6 class="card-subtitle mb-2 text-muted"> (Partial + Fully + Prec) Cumulative</h6>
       	</div>
       	<div class="col">
       		<div class="row">
@@ -344,25 +368,42 @@
 			else 
 			  nc4.innerHTML =  '<i class="fas fa-arrows-alt-h" style="color:#DF1436"></i> ' + data[i].npvac_2;
 			
-			document.getElementById("tDose").innerHTML = data[i].tDose;
+              document.getElementById("pDose").innerHTML = data[i].pDose;
 
-			var nc5=document.getElementById("ntDose");  
-			nc5.innerHTML = data[i].ntDose;
+              var nc5=document.getElementById("npDose");  
+              nc5.innerHTML = data[i].npDose;
 
-			if ( nc5.innerHTML>0){
-				nc5.innerHTML = '<i class="fas fa-arrow-up" style="color:#40B107"></i> ' + data[i].ntDose;
+              if ( nc5.innerHTML>0){
+                  nc5.innerHTML = '<i class="fas fa-arrow-up" style="color:#40B107"></i> ' + data[i].npDose;
+                 }
+
+ 
+            else if(nc5.innerHTML<0){
+            nc5.innerHTML =  '<i class="fas fa-arrow-down" style="color:#DF1436"></i> '  +  data[i].npDose;
+            }
+
+            else 
+            nc5.innerHTML =  '<i class="fas fa-arrows-alt-h" style="color:#DF1436"></i> ' + data[i].npDose;
+
+            document.getElementById("tDose").innerHTML = data[i].tDose;
+
+			var nc6=document.getElementById("ntDose");  
+			nc6.innerHTML = data[i].ntDose;
+
+			if ( nc6.innerHTML>0){
+				nc6.innerHTML = '<i class="fas fa-arrow-up" style="color:#40B107"></i> ' + data[i].ntDose;
 			}
 
 			 
-			else if(nc5.innerHTML<0){
-			nc5.innerHTML =  '<i class="fas fa-arrow-down" style="color:#DF1436"></i> '  +  data[i].ntDose;
+			else if(nc6.innerHTML<0){
+			nc6.innerHTML =  '<i class="fas fa-arrow-down" style="color:#DF1436"></i> '  +  data[i].ntDose;
 			}
 
 			else 
-			  nc5.innerHTML =  '<i class="fas fa-arrows-alt-h" style="color:#DF1436"></i> ' + data[i].ntDose;
+			  nc6.innerHTML =  '<i class="fas fa-arrows-alt-h" style="color:#DF1436"></i> ' + data[i].ntDose;
 
-			var nc6=document.getElementById("lastUpdated");    
-			nc6.innerHTML =  'Last updated on ' + data[i].lastUpdated ;
+			var nc7=document.getElementById("lastUpdated");    
+			nc7.innerHTML =  'Last updated on ' + data[i].lastUpdated ;
 			
 		}
 	})
